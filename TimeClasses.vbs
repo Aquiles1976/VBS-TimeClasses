@@ -309,7 +309,9 @@ Class TimePeriod
     Public Function SameDay
         SameDay = (objStartInstant.Year = objEndInstant.Year)   AND _
                   (objStartInstant.Month = objEndInstant.Month) AND _
-                  (objStartInstant.Day = objEndInstant.Day)
+                  (objStartInstant.Day = objEndInstant.Day)     AND _
+                  objStartInstant.Updated                       AND _
+                  objEndInstant.Updated
     End Function
 
     Public Function GetDuration
@@ -383,12 +385,3 @@ With RunningPeriod
     If .SameDay Then WScript.Echo "Same Day!"
     WScript.Echo "Duration: " & .GetDuration & " from " & .GetShortedFirstMoment & " to " & .GetShortedLastMoment
 End With
-
-'WScript.Echo "Default YEAR value:" & RunningPeriod.FirstMoment.Year
-'RunningPeriod.SetStartNow
-'WScript.Echo "First moment: " & RunningPeriod.GetFirstMoment
-'WScript.Sleep 70000
-'RunningPeriod.SetEndNow
-'WScript.Echo "Last moment: " RunningPeriod.GetLastMoment
-'If RunningPeriod.SameDay Then WScript.Echo "Same Day!"
-'WScript.Echo "Duration: " & RunningPeriod.GetDuration & " from " & RunningPeriod.GetShortedFirstMoment
