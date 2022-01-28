@@ -15,7 +15,7 @@ TimeInstant Class:
 
 Name   | Availability | Type  | Description | Valid values
 ---    | ---          | ---   | ---         | ---
-Updated|Read          |Boolean|Indicates that time data is valid.| True or False.
+Updated|Read/Write    |Boolean|Indicates that time data is valid.| True or False.
 Year   |Read/Write    |String |Contains the year in #### format.| Valid values are between 1000 and 9999.
 Month  |Read/Write    |String |Contains the month number in ## format.| Valid values are between 01 and 12.
 Day    |Read/Write    |String |Contains the day number in ## format.| Valid values are between 01 and 31.
